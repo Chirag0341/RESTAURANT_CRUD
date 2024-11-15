@@ -1,0 +1,194 @@
+/* Styling for the restaurant table and buttons */
+.restaurantTable {
+    max-width: 800px;
+    margin: 20px auto;
+    margin-left: -12rem;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+/* overflow-x: auto; */
+width:fit-content;
+border-radius: 10px;
+/* overflow-y: 100px; */
+}
+
+.addButton {
+    display: inline-block;
+    padding: 12px 24px; /* Adjust padding for a more prominent button */
+    margin-bottom: 20px;
+    color: #fff;
+    background: linear-gradient(90deg, #cbebe9b8, #84a2fbb4);    border: none;
+    border-radius: 14px; /* Rounded corners */
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+.addButton:hover {
+    background-color: #218838;
+    transform: translateY(-2px); /* Slight hover effect */
+}
+
+.addButton:active {
+    background-color: #1e7e34;
+    transform: translateY(0); /* Button back to normal on active */
+}
+
+table {
+    width: 100%;
+    min-width:800px;
+    margin: 0 auto; /* Center-align the table */
+    border-collapse: collapse;
+    box-shadow: 0px 4px 8px rgba(99, 234, 255, 0.795);
+    border-radius: 1rem;
+    align-self: center;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    font-size: 16px; /* Slightly larger font size for better readability */
+}
+
+th {
+    background-color: #007bffcb;
+    color: white;
+    font-weight: bold;
+}
+tr{
+    background-color: #f9f9f994;
+    color: #000000b4;
+font-size:x-large;
+font-style: bolder;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+
+.actionButtons {
+    display: flex;
+    gap: 12px; /* Increased gap for better separation */
+}
+
+.editButton,
+.deleteButton {
+    padding: 10px 20px; /* Matching button size */
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    border-radius: 14px; /* Matching rounded corners */
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* .editButton {
+    background: linear-gradient(90deg, #ffc107, #e0a800); /* Gradient for edit button */
+/* } */ 
+
+.editButton:hover {
+    background-color: #00e0167a;
+    transform: translateY(-2px);
+}
+
+.editButton:active {
+    background-color: #00d354ee;
+    transform: translateY(0);
+}
+
+.deleteButton {
+background-color: #00000000;
+}
+
+.deleteButton:hover {
+    background-color: #fc072056;
+    transform: translateY(-2px);
+}
+
+.deleteButton:active {
+    background-color: #ffffff1f;
+    transform: translateY(0);
+}
+/* Get one section styling */
+.getOneSection {
+    margin: 20px auto;
+    width: 90%;
+    text-align: center;
+}
+
+.getOneSection h2 {
+    margin-bottom: 15px;
+}
+
+.getOneSection input {
+    padding: 8px;
+    font-size: 14px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.fetchButton {
+    padding: 8px 12px;
+    margin-left: 10px;
+    font-size: 14px;
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.fetchButton:hover {
+    background-color: #0b79d0;
+}
+
+Fetched restaurant details table styling
+.restaurantDetails {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f7f7f79c;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.restaurantDetails table {
+    margin-left:-12rem;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.restaurantDetails th,
+.restaurantDetails td {
+    padding: 10px;
+    text-align: left;
+}
+
+.restaurantDetails th {
+    background-color: #007BFF;
+    color: white;
+}
+
+.restaurantDetails tr {
+    background-color: #f9f9f98b;
+}
+
+.restaurantDetails .actionButtons {
+    display: flex;
+    gap: 10px;
+}
+
+.restaurantDetails p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.restaurantDetails strong {
+    color: #333;
+}
