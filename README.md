@@ -139,10 +139,10 @@ RESTAURANT_CRUD/
 ---
 
 ## Screenshots
-### 1. Main Page (All Restaurants)
+### 1. Main Page (All Restaurants,Get specific Restaurant) 
 ![Main Page Screenshot](screenshots/view_all_restaurants.png)
 
-### 2. Fetch Single Restaurant
+### 2. Add New Restaurant
 ![Fetch Single Restaurant Screenshot](screenshots/Add_Restaurant.png)
 
 ---
