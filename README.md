@@ -140,7 +140,7 @@ RESTAURANT_CRUD/
 
 ## Screenshots
 ### 1. Main Page (All Restaurants)
-![Main Page Screenshot]('')
+![Main Page Screenshot]('screenshots/Add_Restaurant.png')
 
 ### 2. Fetch Single Restaurant
 ![Fetch Single Restaurant Screenshot](URL_TO_YOUR_SCREENSHOT)
