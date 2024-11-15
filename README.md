@@ -1,129 +1,156 @@
-Restaurant Management System
-Overview
-This is a Restaurant Management System built with React for the frontend and Node.js/Express for the backend. It allows users to perform CRUD operations on restaurant data. Users can:
 
-Add a new restaurant.
-View all restaurants in a tabular format.
-Fetch details of a specific restaurant by ID.
-Update or delete restaurant information.
-Features
-View All Restaurants
-Displays a list of all restaurants in a table with their name, type, rating, location, and top items.
+# RESTAURANT_CRUD
 
-Fetch Restaurant by ID
-Users can input a restaurant's ID to fetch its details in a dedicated table with options to edit or delete.
+## Overview
+A full-stack CRUD (Create, Read, Update, Delete) application for managing restaurant information. This project allows users to:
+- Add new restaurants.
+- View all restaurants in a table format.
+- Fetch and view details of a specific restaurant by its ID.
+- Update restaurant details.
+- Delete restaurants from the database.
 
-Add New Restaurant
-A form to add a new restaurant to the database.
+This project is built using:
+- **Frontend**: React.js
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB
 
-Edit Restaurant
-Update details for an existing restaurant.
+---
 
-Delete Restaurant
-Remove a restaurant from the database.
+## Features
+1. **Add Restaurant**: Create a new restaurant with attributes like name, type, rating, location, and top items.
+2. **View All Restaurants**: Display all restaurants in a table format with edit and delete options.
+3. **Fetch Single Restaurant by ID**: Retrieve detailed information for a specific restaurant.
+4. **Update Restaurant**: Modify restaurant details through an edit interface.
+5. **Delete Restaurant**: Remove a restaurant from the database.
 
-Installation
-Prerequisites
-Ensure you have the following installed:
+---
 
-Node.js (v14+)
-MongoDB
-Clone the Repository
-bash
-Copy code
-git clone https://github.com/yourusername/restaurant-management-system.git
-cd restaurant-management-system
-Backend Setup
-Navigate to the backend folder:
+## Setup Instructions
 
-bash
-Copy code
-cd backend
-Install dependencies:
+### Prerequisites
+- Node.js installed on your system.
+- MongoDB installed and running.
+- Git installed for version control.
 
-bash
-Copy code
-npm install
-Set up environment variables:
+### Steps
 
-Create a .env file in the backend directory.
-Add the following variables:
-env
-Copy code
-PORT=8000
-MONGO_URI=your_mongodb_connection_string
-Start the backend server:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Chirag0341/RESTAURANT_CRUD.git
+   ```
+   Navigate into the project directory:
+   ```bash
+   cd RESTAURANT_CRUD
+   ```
 
-bash
-Copy code
-npm start
-Frontend Setup
-Navigate to the frontend folder:
+2. **Backend Setup**:
+   Navigate to the `backend` folder:
+   ```bash
+   cd backend
+   ```
+   Install dependencies:
+   ```bash
+   npm install
+   ```
+   Start the backend server:
+   ```bash
+   npm start
+   ```
 
-bash
-Copy code
-cd frontend
-Install dependencies:
+3. **Frontend Setup**:
+   Navigate to the `frontend` folder:
+   ```bash
+   cd frontend
+   ```
+   Install dependencies:
+   ```bash
+   npm install
+   ```
+   Start the React development server:
+   ```bash
+   npm start
+   ```
 
-bash
-Copy code
-npm install
-Start the frontend server:
+4. **MongoDB Configuration**:
+   - Ensure MongoDB is running locally or provide the connection string in the `.env` file in the backend folder:
+     ```env
+     MONGO_URI=mongodb://localhost:27017/restaurant_crud
+     ```
 
-bash
-Copy code
-npm start
-API Endpoints
-Backend Routes
-Endpoint	Method	Description
-/api/create	POST	Create a new restaurant
-/api/getAll	GET	Fetch all restaurants
-/api/getOne/:id	GET	Fetch a restaurant by ID
-/api/update/:id	PUT	Update restaurant details by ID
-/api/delete/:id	DELETE	Delete a restaurant by ID
-File Structure
-Backend
-plaintext
-Copy code
-backend/
-├── controllers/
-│   └── restaurantController.js  # Controller logic for API endpoints
-├── models/
-│   └── restaurantModel.js       # Mongoose schema for restaurants
-├── routes/
-│   └── restaurantRoutes.js      # API route definitions
-└── server.js                    # Entry point for the backend
-Frontend
-plaintext
-Copy code
-frontend/
-├── src/
-│   ├── components/
-│   │   ├── GetRestaurant.jsx    # Component for displaying restaurants
-│   │   ├── AddRestaurant.jsx    # Component for adding a restaurant
-│   │   └── UpdateRestaurant.jsx # Component for updating a restaurant
-│   ├── styles/
-│   │   └── getrestaurant.css    # CSS for the GetRestaurant component
-│   └── App.js                   # Main application file
-└── package.json                 # Frontend dependencies
-Usage
-Viewing All Restaurants
-Navigate to the homepage to view a table of all restaurants with their details.
-Fetching a Restaurant by ID
-Enter the ID of a restaurant in the input field under Get Restaurant Details.
-Click Fetch Details to view its information in a table format.
-Adding a New Restaurant
-Click on the Add Restaurant button.
-Fill out the form and click Submit to add a new restaurant.
-Editing or Deleting a Restaurant
-Use the ✏️ button to edit a restaurant's details.
-Use the ❌ button to delete a restaurant.
-Screenshots
-1. View All Restaurants
-<img src="screenshots/view_all_restaurants.png" alt="View All Restaurants" width="800"/>
-2. Fetch Restaurant by ID
-<img src="screenshots/fetch_restaurant_by_id.png" alt="Fetch Restaurant by ID" width="800"/>
-Tech Stack
-Frontend: React, Axios, CSS
-Backend: Node.js, Express
-Database: MongoDB
+---
+
+## API Endpoints
+The backend provides the following RESTful API endpoints:
+
+### Restaurant Endpoints
+1. **Create a Restaurant**:  
+   `POST /api/create`  
+   Body Example:
+   ```json
+   {
+     "Name": "Pasta House",
+     "Type": "Italian",
+     "Rating": 4.5,
+     "Location": "New York",
+     "Top_food": ["Pasta", "Pizza"]
+   }
+   ```
+
+2. **Fetch All Restaurants**:  
+   `GET /api/getAll`
+
+3. **Fetch Restaurant by ID**:  
+   `GET /api/getOne/:id`
+
+4. **Update Restaurant**:  
+   `PUT /api/update/:id`  
+   Body Example:
+   ```json
+   {
+     "Rating": 4.8
+   }
+   ```
+
+5. **Delete Restaurant**:  
+   `DELETE /api/delete/:id`
+
+---
+
+## Folder Structure
+```
+RESTAURANT_CRUD/
+│
+├── backend/                # Backend application
+│   ├── model/              # Mongoose schema for restaurants
+│   ├── routes/             # API route definitions
+│   ├── controller/         # Controller logic
+│   └── server.js           # Entry point for the backend server
+│
+├── frontend/               # Frontend React application
+│   ├── src/                
+│       ├── components/     # React components
+│       ├── App.js          # Main application entry
+│       ├── index.js        # React DOM rendering
+│   └── public/             # Static files
+│
+└── README.md               # Project documentation
+```
+
+---
+
+## Screenshots
+### 1. Main Page (All Restaurants)
+![Main Page Screenshot](URL_TO_YOUR_SCREENSHOT)
+
+### 2. Fetch Single Restaurant
+![Fetch Single Restaurant Screenshot](URL_TO_YOUR_SCREENSHOT)
+
+---
+
+## Contributions
+Feel free to fork this repository, raise issues, or submit pull requests.
+
+---
+
+## License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
